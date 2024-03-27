@@ -6,6 +6,7 @@ services:
       context: ./apps/OpenSignServer
       dockerfile: Dockerfile
     image: opensignserver-image
+    pull_policy: build
     container_name: OpenSignServer-container
     command: /usr/src/app/node_modules/.bin/nodemon server.js
     volumes:
