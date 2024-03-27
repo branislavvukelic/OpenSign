@@ -10,8 +10,8 @@ services:
     container_name: OpenSignServer-container
     command: /usr/src/app/node_modules/.bin/nodemon server.js
     volumes:
-      - ./apps/OpenSignServer/:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./apps/OpenSignServer/:/usr/app
+      - /usr/app/node_modules
     ports:
       - "8081:8081"
     depends_on:
