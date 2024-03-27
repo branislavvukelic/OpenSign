@@ -24,6 +24,7 @@ services:
     build:
       context: ./apps/mongo
       dockerfile: Dockerfile
+    pull_policy: build
     container_name: mongo-container
     image: opensign-mongo
     volumes:
