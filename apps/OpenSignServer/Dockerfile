@@ -1,5 +1,6 @@
 # Use an official Node runtime as the base image
-FROM node:16
+FROM node:18-buster
+
 
 # Set the working directory inside the container
 WORKDIR /usr/src/app
