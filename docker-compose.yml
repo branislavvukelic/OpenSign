@@ -12,7 +12,7 @@ services:
       - ./apps/OpenSignServer/:/usr/src/app
       - /usr/src/app/node_modules
     ports:
-      - "8080:8080"
+      - "8081:8081"
     depends_on:
       - mongo
     env_file: stack.env
