@@ -1,5 +1,5 @@
 # Use the official MongoDB imagee
-FROM mongo:4.4
+FROM mongo:4.4-focal
 
 # Create a directory to host initialization scripts
 RUN mkdir -p /docker-entrypoint-initdb.d
