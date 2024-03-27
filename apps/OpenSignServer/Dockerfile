@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json first to leverage Docker cache
-COPY ./package*.json ./
+COPY apps/OpenSignServer/package*.json ./
 
 # Install application dependencies
 RUN npm install
