@@ -1,11 +1,11 @@
 # Use an official Node runtime as the base image
-FROM node:16
+FROM node:18
 
 # Set the working directory inside the container
 WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json first to leverage Docker cache
-COPY apps/OpenSignServer/package*.json ./
+COPY ./package*.json ./
 
 # Install application dependencies
 RUN npm install
@@ -14,7 +14,7 @@ RUN npm install
 # RUN apk add --no-cache make gcc g++ python3
 
 # Copy the current directory contents into the container
-COPY apps/OpenSignServer/ .
+COPY ./ .
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8081
@@ -24,4 +24,4 @@ EXPOSE 8081
 # ENV DATABASE_URL mongodb://db:27017
 
 # Run the application
-CMD ["npm", "start"]
+ENTRYPOINT npm start
